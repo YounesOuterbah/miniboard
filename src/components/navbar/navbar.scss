@@ -7,19 +7,28 @@
         width: 100%;
 
         .logo {
-            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            margin-bottom: 25px;
             color: var(--txtColor);
+            cursor: pointer;
 
             font: {
                 weight: bold;
                 size: 22px;
             }
 
+            .icon {
+                margin-right: 10px;
+                background: var(--gradientColor);
+            }
         }
 
         ul.dashboard-contect {
             li {
-                display: flex; align-items: center;
+                display: flex;
+                align-items: center;
                 cursor: pointer;
                 width: 100%;
                 border-top-right-radius: 50px;
