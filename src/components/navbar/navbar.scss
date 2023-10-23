@@ -1,0 +1,61 @@
+.navbar {
+    width: 20%;
+    position: relative;
+    height: 100vh;
+
+    .container {
+        width: 100%;
+
+        .logo {
+            margin-bottom: 10px;
+            color: var(--txtColor);
+
+            font: {
+                weight: bold;
+                size: 22px;
+            }
+
+        }
+
+        ul.dashboard-contect {
+            li {
+                display: flex; align-items: center;
+                cursor: pointer;
+                width: 100%;
+                border-top-right-radius: 50px;
+                border-bottom-right-radius: 50px;
+
+                padding: {
+                    top: 10px;
+                    bottom: 10px;
+                    left: 15px;
+                }
+
+                ;
+
+                margin: {
+                    top: 5px;
+                    bottom: 5px;
+                    left: -15px;
+                }
+
+                ;
+
+
+                &:hover {
+                    background: rgba(58, 53, 65, 0.04);
+                }
+
+                &.active {
+                    background-image: var(--gradientColor);
+                    color: white;
+                }
+
+                & .icon {
+                    margin-right: 10px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

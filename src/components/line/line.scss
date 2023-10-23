@@ -1,0 +1,22 @@
+.line {
+    position: relative;
+    padding: 1px;
+    color: var(--txtLineColor);
+
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: calc(50% - 1px);
+        left: -10px;
+        z-index: -1;
+        width: 200px;
+        height: 1px;
+        background: var(--lineColor);
+    }
+
+    & span {
+        padding: 5px;
+        font-size: 14px;
+        background: var(--bgColor);
+    }
+}
