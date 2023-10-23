@@ -17,6 +17,16 @@ body {
   background-color: var(--bgColor);
 }
 
+.application {
+  display: flex;
+}
+.app-nav {
+  width: 20%;
+}
+.app-body {
+  width: 80%;
+}
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
