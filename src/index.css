@@ -5,6 +5,30 @@
   margin: 0;
 }
 
+:root {
+  --bgColor: rgb(244, 245, 250);
+  --txtLineColor: rgba(58, 53, 65, 0.87);
+  --lineColor: rgba(58, 53, 65, 0.12);
+}
+
+body {
+  background-color: var(--bgColor);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
