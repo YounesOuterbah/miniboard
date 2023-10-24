@@ -10,7 +10,7 @@ function App() {
       <Navbar menuToggle={menuToggle} setMenuToggle={setMenuToggle} />
       <div className="app-body">
         <Control setMenuToggle={setMenuToggle} />
-        {/* <Dashboard /> */}
+        <Dashboard />
       </div>
     </div>
   );

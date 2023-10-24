@@ -1,5 +1,5 @@
 .control {
-    padding: 0 15px;
+    padding: 0 25px;
     padding-top: 15px;
     display: flex;
     align-items: center;
@@ -31,6 +31,7 @@
             .icon {
                 margin: 0 8px 0 5px;
                 color: var(--txtColor);
+                font-size: 22px;
             }
 
             input {

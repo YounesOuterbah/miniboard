@@ -1,7 +1,8 @@
 import "./control.scss";
-import { BiSearch, BiMenu } from "react-icons/bi";
+import { AiOutlineSearch } from "react-icons/ai";
+import { BiMenu } from "react-icons/bi";
 import { BsMoonStars, BsBell, BsSun } from "react-icons/bs";
-import profileImage from "/img/profile.png";
+import profileImage from "/image/profile.png";
 import { useState } from "react";
 
 export const Control = ({ setMenuToggle }) => {
@@ -9,9 +10,9 @@ export const Control = ({ setMenuToggle }) => {
   return (
     <div className="control">
       <div className="menu-search">
-        <BiMenu className="menu" onClick={()=>setMenuToggle(true)} />
+        <BiMenu className="menu" onClick={() => setMenuToggle(true)} />
         <div className="search">
-          <BiSearch className="icon" />
+          <AiOutlineSearch className="icon" />
           <input type="search" name="" id="" />
         </div>
       </div>
