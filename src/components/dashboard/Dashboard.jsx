@@ -1,4 +1,5 @@
 import { CardBox } from "./CardBox";
+import ChartBar from "./ChartBar";
 import "./dashboard.scss";
 import trophy from "/image/trophy.png";
 import { FaArrowTrendUp, FaRegUser, FaLaptop, FaDollarSign } from "react-icons/fa6";
@@ -64,6 +65,7 @@ export const Dashboard = () => {
             />
           </div>
         </div>
+        <ChartBar style={{flex:"1"}}/>
       </div>
     </div>
   );
