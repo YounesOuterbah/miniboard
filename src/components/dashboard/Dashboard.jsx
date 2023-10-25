@@ -3,6 +3,7 @@ import ChartBar from "./ChartBar";
 import "./dashboard.scss";
 import trophy from "/image/trophy.png";
 import { FaArrowTrendUp, FaRegUser, FaLaptop, FaDollarSign } from "react-icons/fa6";
+import { data } from "../../data/TotalEarning/";
 
 export const Dashboard = () => {
   return (
@@ -10,7 +11,7 @@ export const Dashboard = () => {
       <div className="cards">
         <div className="card">
           <div className="txt">
-            <h3 className="title">Congratulations John! 🥳</h3>
+            <h1 className="title">Congratulations John! 🥳</h1>
             <p>Best seller of the month</p>
             <h4>$42.8k</h4>
             <button>VIEW SALES</button>
@@ -21,7 +22,7 @@ export const Dashboard = () => {
         </div>
         <div className="card">
           <div className="txt">
-            <h3 className="title">Statistics Card</h3>
+            <h1 className="title">Statistics Card</h1>
             <p>
               <span>Total 48.5% growth</span> 😎 this month
             </p>
@@ -65,7 +66,36 @@ export const Dashboard = () => {
             />
           </div>
         </div>
-        <ChartBar style={{flex:"1"}}/>
+        <div className="bar-chart">
+          <h1 className="title">Weekly Overview</h1>
+          <ChartBar />
+        </div>
+        <div className="total-earning">
+          <h1 className="title">Total Earning</h1>
+          <p className="rev">$24,895</p>
+          <p className="des">Compared to $84,325 last year</p>
+          <div className="item-box">
+            {data.map((item) => (
+              <div className="earn-info">
+                <div className="earn">
+                  <div className="earn-img">
+                    <img src={item.imgSrc} height={item.imgHeight} alt="" />
+                  </div>
+                  <div className="earn-txt">
+                    <p className="company">{item.title}</p>
+                    <p className="subs">{item.subtitle}</p>
+                  </div>
+                </div>
+                <div className="scroller">
+                  <p>{item.amount}</p>
+                  <div className="bar">
+                    <span style={{width:`${item.progress}%`}}></span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

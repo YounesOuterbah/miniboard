@@ -4,18 +4,18 @@ import { data } from "../../data/WeeklyOverview";
 export default function ChartBar() {
   return (
     <BarChart
-      width={500}
+      width={350}
       height={300}
       data={data}
       margin={{
         top: 5,
-        right: 180,
+        right: 30,
         left: 0,
         bottom: 5,
       }}
       barSize={20}
     >
-      <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+      <XAxis dataKey="name" scale="point" padding={{ left: 10, right:10 }} />
       <YAxis />
       <Tooltip />
       <Legend />
