@@ -8,6 +8,7 @@
 :root {
   --bgColor: rgb(244, 245, 250);
   --txtColor: rgba(58, 53, 65, 0.87);
+  --txtColorVar: rgba(58, 53, 65, 0.68);
   --txtLineColor: rgba(58, 53, 65, 0.38);
   --lineColor: rgba(58, 53, 65, 0.12);
   --gradientColor: linear-gradient(98deg, rgb(198, 167, 254), rgb(145, 85, 253) 94%);
