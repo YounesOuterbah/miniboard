@@ -7,7 +7,7 @@ export const TotalEarning = () => {
       <p className="des">Compared to $84,325 last year</p>
       <div className="item-box">
         {data.map((item) => (
-          <div className="earn-info">
+          <div className="earn-info" key={item.id}>
             <div className="earn">
               <div className="earn-img">
                 <img src={item.imgSrc} height={item.imgHeight} alt="" />

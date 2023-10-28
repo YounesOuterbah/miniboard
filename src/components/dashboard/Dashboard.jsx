@@ -3,8 +3,7 @@ import ChartBar from "./ChartBar";
 import { TotalEarning } from "./TotalEarning";
 import "./dashboard.scss";
 import { MultiBox } from "./MultiBox";
-
-import { rows } from "../../data/Table";
+import { Table } from "./Table";
 
 export const Dashboard = () => {
   return (
@@ -24,33 +23,7 @@ export const Dashboard = () => {
         </div>
       </div>
       <div className="members-table">
-        <table>
-          <thead>
-            <tr>
-              <th>NAME</th>
-              <th>EMAIL</th>
-              <th>DATE</th>
-              <th>SALARY</th>
-              <th>AGE</th>
-              <th>STATUS</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((item) => (
-              <tr>
-                <td>
-                  {item.name}
-                  <p>{item.designation}</p>
-                </td>
-                <td>{item.email}</td>
-                <td>{item.date}</td>
-                <td>{item.salary}</td>
-                <td>{item.age}</td>
-                <td>{item.status}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Table />
       </div>
     </div>
   );

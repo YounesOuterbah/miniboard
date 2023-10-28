@@ -314,10 +314,12 @@
         background: #fff;
         border-radius: 6px;
         padding: 20px;
+        overflow-x: scroll;
 
         table {
             width: 100%;
             color: var(--txtColor);
+            font-size: 14px;
 
             th {
                 text-align: left;
@@ -334,7 +336,45 @@
                         color: var(--txtColorVar);
                     }
                 }
+
+                td.status {
+                    color: white;
+                    padding: 5px 8px;
+                    font-weight: 500;
+                    border-radius: 50px;
+                    width: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
+        }
+    }
+}
+
+@media (max-width:1109px) {
+    .dashboard .cards {
+
+        .card {
+            flex: 1;
+            flex-basis: auto;
+        }
+
+        .card:nth-child(2) .boxs {
+            flex-direction: column;
+
+            .card-box {
+                margin: 15px 0;
+            }
+        }
+
+        .bar-chart {
+            flex: 1;
+            flex-basis: auto;
+        }
+
+        .total-earning {
+            flex: 1;
         }
     }
 }

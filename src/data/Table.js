@@ -1,5 +1,6 @@
 export const rows = [
   {
+    id: 1,
     age: 27,
     status: "current",
     date: "09/27/2018",
@@ -7,8 +8,10 @@ export const rows = [
     salary: "$19586.23",
     email: "eebsworth2m@sbwire.com",
     designation: "Human Resources Assistant",
+    color: "#9155fd",
   },
   {
+    id: 2,
     age: 61,
     date: "09/23/2016",
     salary: "$23896.35",
@@ -16,8 +19,10 @@ export const rows = [
     name: "Margaret Bowers",
     email: "kocrevy0@thetimes.co.uk",
     designation: "Nuclear Power Engineer",
+    color: "#56ca00",
   },
   {
+    id: 3,
     age: 59,
     date: "10/15/2017",
     name: "Minnie Roy",
@@ -25,8 +30,10 @@ export const rows = [
     salary: "$18991.67",
     email: "ediehn6@163.com",
     designation: "Environmental Specialist",
+    color: "#ff4c51",
   },
   {
+    id: 4,
     age: 30,
     date: "06/12/2018",
     status: "resigned",
@@ -34,8 +41,10 @@ export const rows = [
     name: "Ralph Leonard",
     email: "dfalloona@ifeng.com",
     designation: "Sales Representative",
+    color: "#ffb400",
   },
   {
+    id: 5,
     age: 66,
     status: "applied",
     date: "03/24/2018",
@@ -43,8 +52,10 @@ export const rows = [
     name: "Annie Martin",
     designation: "Operator",
     email: "sganderton2@tuttocitta.it",
+    color: "#16b1ff",
   },
   {
+    id: 6,
     age: 33,
     date: "08/25/2017",
     salary: "$10909.52",
@@ -52,8 +63,10 @@ export const rows = [
     status: "professional",
     email: "hnisius4@gnu.org",
     designation: "Senior Cost Accountant",
+    color: "#56ca00",
   },
   {
+    id: 7,
     age: 61,
     status: "current",
     date: "06/01/2017",
@@ -61,8 +74,10 @@ export const rows = [
     name: "Lora Jackson",
     designation: "Geologist",
     email: "ghoneywood5@narod.ru",
+    color: "#9155fd",
   },
   {
+    id: 8,
     age: 22,
     date: "12/03/2017",
     salary: "$12336.17",
@@ -70,5 +85,6 @@ export const rows = [
     status: "professional",
     designation: "Cost Accountant",
     email: "dcrossman3@google.co.jp",
+    color: "#56ca00",
   },
 ];

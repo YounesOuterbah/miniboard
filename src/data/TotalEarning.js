@@ -1,5 +1,6 @@
 export const data = [
   {
+    id: 1,
     progress: 75,
     imgHeight: 20,
     title: "Zipcar",
@@ -8,6 +9,7 @@ export const data = [
     imgSrc: "/image/cards/logo-zipcar.png",
   },
   {
+    id: 2,
     progress: 50,
     imgHeight: 27,
     title: "Bitbank",
@@ -16,6 +18,7 @@ export const data = [
     imgSrc: "/image/cards/logo-bitbank.png",
   },
   {
+    id: 3,
     progress: 20,
     imgHeight: 20,
     title: "Aviato",
