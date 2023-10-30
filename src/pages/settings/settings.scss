@@ -82,6 +82,18 @@
                         }
                     }
 
+                    button.reset {
+                        margin-left: 10px;
+                        background: white;
+                        color: #ff4c51;
+                        border: 1px solid #ff4c51;
+                        box-shadow: none;
+
+                        &:hover {
+                            background: #ff4c5221;
+                        }
+                    }
+
                     p {
                         font-size: 14px;
                         color: var(--txtColor);
@@ -92,11 +104,14 @@
             .form {
                 display: flex;
                 gap: 10px;
+                flex-wrap: wrap;
 
-                input {
+                input,
+                select {
                     padding: 15px 10px;
                     font-size: 16px;
                     outline: none;
+                    margin: 1px;
                     width: 100%;
                     color: var(--txtColor);
                     border-radius: 6px;
@@ -105,13 +120,11 @@
                     &:focus {
                         border-color: var(--mainColor);
                     }
-
                 }
 
-                .username,
-                .name,
-                .email {
+                %field {
                     position: relative;
+
                     label {
                         position: absolute;
                         font-size: 12px;
@@ -121,9 +134,23 @@
                         padding: 2px;
                         color: var(--txtColor);
                     }
+                }
 
+                .username,
+                .name,
+                .email,
+                .selection {
+                    @extend %field;
+                    width: 49%;
+
+                    &:focus-within {
+                        label {
+                            color: var(--mainColor);
+                        }
+                    }
                 }
             }
+
         }
     }
 }

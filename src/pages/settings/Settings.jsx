@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { AiOutlineUser, AiOutlineInfoCircle } from "react-icons/ai";
 import { CiUnlock } from "react-icons/ci";
 import profile from "/image/profile.png";
@@ -19,7 +19,6 @@ export const Settings = () => {
     if (file) {
       const imageURL = URL.createObjectURL(file);
       setSelectedImg(imageURL);
-      console.log(imageURL);
     }
   };
 
@@ -48,6 +47,9 @@ export const Settings = () => {
             <img src={selectedImg} alt="profile img" />
             <div className="info">
               <button onClick={handleClick}>UPLOAD NEW PHOTO</button>
+              <button className="reset" onClick={() => setSelectedImg(profile)}>
+                RESET
+              </button>
               <input
                 type="file"
                 accept="image/png, image/jpeg"
@@ -58,7 +60,7 @@ export const Settings = () => {
               <p>Allowed PNG or JPEG. Max size of 800K.</p>
             </div>
           </div>
-          <div className="form">
+          <form className="form">
             <div className="username">
               <input type="text" defaultValue="jhonDoe" placeholder="User Name" />
               <label>Username</label>
@@ -71,13 +73,16 @@ export const Settings = () => {
               <input type="email" defaultValue="jhonDoe@example.co" placeholder="email" />
               <label>Email</label>
             </div>
-            <select>
-              <option value="">Admin</option>
-              <option value="">Author</option>
-              <option value="">Editor</option>
-              <option value="">Subscriber</option>
-            </select>
-          </div>
+            <div className="selection">
+              <select>
+                <option value="">Admin</option>
+                <option value="">Author</option>
+                <option value="">Editor</option>
+                <option value="">Subscriber</option>
+              </select>
+              <label>Role</label>
+            </div>
+          </form>
         </div>
       </div>
     </div>
