@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { AiOutlineUser, AiOutlineInfoCircle } from "react-icons/ai";
 import { CiUnlock } from "react-icons/ci";
 import profile from "/image/profile.png";
@@ -19,6 +19,16 @@ export const Settings = () => {
     if (file) {
       const imageURL = URL.createObjectURL(file);
       setSelectedImg(imageURL);
+    }
+  };
+
+  const resetImage = () => {
+    // Reset the selected image
+    setSelectedImg(profile);
+
+    // Reset the input element's value
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
     }
   };
 
@@ -47,7 +57,7 @@ export const Settings = () => {
             <img src={selectedImg} alt="profile img" />
             <div className="info">
               <button onClick={handleClick}>UPLOAD NEW PHOTO</button>
-              <button className="reset" onClick={() => setSelectedImg(profile)}>
+              <button className="reset" onClick={resetImage}>
                 RESET
               </button>
               <input
