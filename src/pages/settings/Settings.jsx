@@ -56,7 +56,9 @@ export const Settings = () => {
           <div className="img-wrapper">
             <img src={selectedImg} alt="profile img" />
             <div className="info">
-              <button onClick={handleClick}>UPLOAD NEW PHOTO</button>
+              <button className="upload" onClick={handleClick}>
+                UPLOAD NEW PHOTO
+              </button>
               <button className="reset" onClick={resetImage}>
                 RESET
               </button>

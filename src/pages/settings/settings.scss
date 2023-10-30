@@ -104,6 +104,7 @@
             .form {
                 display: flex;
                 gap: 10px;
+                padding-bottom: 20px;
                 flex-wrap: wrap;
 
                 input,
@@ -152,5 +153,44 @@
             }
 
         }
+    }
+}
+
+@media (max-width:588px) {
+    .settings .box-container {
+        .links {
+            li .icon {
+                display: none;
+            }
+        }
+
+        .content {
+            .img-wrapper {
+                flex-direction: column;
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+
+                    button.upload {
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                    }
+
+                    button.reset {
+                        margin-left: 0;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .form .username,
+            .form .name,
+            .form .email,
+            .form .selection {
+                width: 100%;
+            }
+        }
+
     }
 }
