@@ -7,9 +7,10 @@ import "./settings.scss";
 export const Settings = () => {
   const [toggle, setToggle] = useState("account");
   const [selectedImg, setSelectedImg] = useState(profile);
-  const fileInputRef = useRef(null);
+  const fileInputRef = useRef();
 
-  const handleUploadClick = () => {
+  const handleClick = () => {
+    console.log(fileInputRef);
     fileInputRef.current.click();
   };
 
@@ -20,6 +21,7 @@ export const Settings = () => {
       setSelectedImg(imageURL);
     }
   };
+
   return (
     <div className="settings">
       <div className="box-container">
@@ -44,10 +46,10 @@ export const Settings = () => {
           <div className="img-wrapper">
             <img src={selectedImg} alt="profile img" />
             <div className="info">
-              <button onClick={handleUploadClick}>UPLOAD NEW PHOTO</button>
+              <button onClick={handleClick}>UPLOAD NEW PHOTO</button>
               <input
                 type="file"
-                accept="image/png, image/jpeg"
+                accept="image/*"
                 style={{ display: "none" }}
                 ref={fileInputRef}
                 onChange={handleFileSelected}
