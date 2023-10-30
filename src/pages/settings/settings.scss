@@ -49,6 +49,7 @@
 
         .content {
             padding: 0 20px;
+
             .img-wrapper {
                 display: flex;
                 align-items: center;
@@ -80,27 +81,47 @@
                             box-shadow: 0px 6px 18px -8px rgba(58, 53, 65, 0.56);
                         }
                     }
-                    p{
+
+                    p {
                         font-size: 14px;
                         color: var(--txtColor);
                     }
                 }
             }
-            .form{
+
+            .form {
                 display: flex;
                 gap: 10px;
-                input{
+
+                input {
                     padding: 15px 10px;
                     font-size: 16px;
                     outline: none;
-                    width:100%;
+                    width: 100%;
                     color: var(--txtColor);
                     border-radius: 6px;
                     border: 2px solid var(--lineColor);
-                    
-                    &:focus{
+
+                    &:focus {
                         border-color: var(--mainColor);
                     }
+
+                }
+
+                .username,
+                .name,
+                .email {
+                    position: relative;
+                    label {
+                        position: absolute;
+                        font-size: 12px;
+                        top: -9px;
+                        left: 10px;
+                        background: #FFF;
+                        padding: 2px;
+                        color: var(--txtColor);
+                    }
+
                 }
             }
         }

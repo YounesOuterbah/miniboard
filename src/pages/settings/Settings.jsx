@@ -10,15 +10,16 @@ export const Settings = () => {
   const fileInputRef = useRef();
 
   const handleClick = () => {
-    console.log(fileInputRef);
     fileInputRef.current.click();
   };
 
   const handleFileSelected = (event) => {
     const file = event.target.files[0];
+
     if (file) {
       const imageURL = URL.createObjectURL(file);
       setSelectedImg(imageURL);
+      console.log(imageURL);
     }
   };
 
@@ -49,7 +50,7 @@ export const Settings = () => {
               <button onClick={handleClick}>UPLOAD NEW PHOTO</button>
               <input
                 type="file"
-                accept="image/*"
+                accept="image/png, image/jpeg"
                 style={{ display: "none" }}
                 ref={fileInputRef}
                 onChange={handleFileSelected}
@@ -58,9 +59,18 @@ export const Settings = () => {
             </div>
           </div>
           <div className="form">
-            <input type="text" defaultValue="jhonDoe" placeholder="User Name" />
-            <input type="text" defaultValue="jhon Doe" placeholder="Name" />
-            <input type="email" defaultValue="jhonDoe@example.co" placeholder="email" />
+            <div className="username">
+              <input type="text" defaultValue="jhonDoe" placeholder="User Name" />
+              <label>Username</label>
+            </div>
+            <div className="name">
+              <input type="text" defaultValue="jhon Doe" placeholder="Name" />
+              <label>Name</label>
+            </div>
+            <div className="email">
+              <input type="email" defaultValue="jhonDoe@example.co" placeholder="email" />
+              <label>Email</label>
+            </div>
             <select>
               <option value="">Admin</option>
               <option value="">Author</option>

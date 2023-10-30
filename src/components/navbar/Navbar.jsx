@@ -10,10 +10,14 @@ import { BsPeople, BsCalendarDate, BsPencilSquare, BsPaintBucket } from "react-i
 import { GrTask } from "react-icons/gr";
 import { MdDashboard } from "react-icons/md";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = ({ menuToggle, setMenuToggle }) => {
+  const location = useLocation();
   const [toggle, setToggle] = useState("Dashboard");
+
+  const isLinkActive = (path) => location.pathname === path;
+
   return (
     <div className={menuToggle ? "navbar open" : "navbar"}>
       <div className="container">
@@ -25,7 +29,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
         <ul className="dashboard-contect">
           <Link
             to="/"
-            className={toggle === "Dashboard" ? "active" : ""}
+            className={isLinkActive("/") ? "active" : ""}
             onClick={() => {
               setToggle("Dashboard"), setMenuToggle(!menuToggle);
             }}
@@ -34,7 +38,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           </Link>
           <Link
             to="/settings"
-            className={toggle === "Account" ? "active" : ""}
+            className={isLinkActive("/settings") ? "active" : ""}
             onClick={() => {
               setToggle("Account"), setMenuToggle(!menuToggle);
             }}
@@ -44,7 +48,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           </Link>
           <Line txt="PAGES" />
           <Link
-            className={toggle === "Order" ? "active" : ""}
+            to="/order"
+            className={isLinkActive("/order") ? "active" : ""}
             onClick={() => {
               setToggle("Order"), setMenuToggle(!menuToggle);
             }}
@@ -53,7 +58,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
             Order
           </Link>
           <Link
-            className={toggle === "Employees" ? "active" : ""}
+            to="/employees"
+            className={isLinkActive("/employees") ? "active" : ""}
             onClick={() => {
               setToggle("Employees"), setMenuToggle(!menuToggle);
             }}
@@ -62,7 +68,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
             Employees
           </Link>
           <Link
-            className={toggle === "Customers" ? "active" : ""}
+            to="/customers"
+            className={isLinkActive("/customers") ? "active" : ""}
             onClick={() => {
               setToggle("Customers"), setMenuToggle(!menuToggle);
             }}
@@ -72,20 +79,26 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           </Link>
           <Line txt="APPS" />
           <Link
-            className={toggle === "Calender" ? "active" : ""}
+            to="/calendar"
+            className={isLinkActive("/calendar") ? "active" : ""}
             onClick={() => {
-              setToggle("Calender"), setMenuToggle(!menuToggle);
+              setToggle("Calendar"), setMenuToggle(!menuToggle);
             }}
           >
             <BsCalendarDate className="icon" />
-            Calender
+            Calendar
           </Link>
-          <Link className={toggle === "Kanban" ? "active" : ""} onClick={() => setToggle("Kanban")}>
+          <Link
+            to="/kanban"
+            className={isLinkActive("/kanban") ? "active" : ""}
+            onClick={() => setToggle("Kanban")}
+          >
             <GrTask className="icon" />
             Kanban
           </Link>
           <Link
-            className={toggle === "Editor" ? "active" : ""}
+            to="/editor"
+            className={isLinkActive("/editor") ? "active" : ""}
             onClick={() => {
               setToggle("Editor"), setMenuToggle(!menuToggle);
             }}
@@ -94,9 +107,10 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
             Editor
           </Link>
           <Link
-            className={toggle === "Cpicker" ? "active" : ""}
+            to="/color-picker"
+            className={isLinkActive("/color-picker") ? "active" : ""}
             onClick={() => {
-              setToggle("Cpicker"), setMenuToggle(!menuToggle);
+              setToggle("ColorPicker"), setMenuToggle(!menuToggle);
             }}
           >
             <BsPaintBucket className="icon" />
