@@ -1,0 +1,108 @@
+.settings {
+    margin: 25px 0;
+    padding: 0 25px;
+
+    .box-container {
+        background: white;
+        border-radius: 6px;
+
+        .links {
+            display: flex;
+            border-bottom: 1px solid var(--lineColor);
+            margin-bottom: 20px;
+
+            li {
+                color: var(--txtColor);
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                cursor: pointer;
+                padding: 20px;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    background: var(--mainColor);
+                    width: 0;
+                    height: 2px;
+                    transition: .5s ease;
+                }
+
+                .icon {
+                    font-size: 20px;
+                    margin-right: 8px;
+                }
+            }
+
+            li.active {
+                color: var(--mainColor);
+
+                &::before {
+                    width: 100%;
+                }
+
+            }
+        }
+
+        .content {
+            padding: 0 20px;
+            .img-wrapper {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+
+                img {
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 6px;
+                    object-fit: cover;
+                }
+
+                .info {
+                    margin-left: 20px;
+
+                    button {
+                        padding: 10px 20px;
+                        background: var(--mainColor);
+                        color: white;
+                        border: none;
+                        border-radius: 6px;
+                        font-weight: 500;
+                        cursor: pointer;
+                        margin-bottom: 20px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            background: #7931ff;
+                            box-shadow: 0px 6px 18px -8px rgba(58, 53, 65, 0.56);
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        color: var(--txtColor);
+                    }
+                }
+            }
+            .form{
+                display: flex;
+                gap: 10px;
+                input{
+                    padding: 15px 10px;
+                    font-size: 16px;
+                    outline: none;
+                    width:100%;
+                    color: var(--txtColor);
+                    border-radius: 6px;
+                    border: 2px solid var(--lineColor);
+                    
+                    &:focus{
+                        border-color: var(--mainColor);
+                    }
+                }
+            }
+        }
+    }
+}

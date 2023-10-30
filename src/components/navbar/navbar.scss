@@ -26,7 +26,8 @@
         }
 
         ul.dashboard-contect {
-            li {
+            a {
+                color: black;
                 display: flex;
                 align-items: center;
                 cursor: pointer;
@@ -73,6 +74,7 @@
     .navbar {
         position: absolute;
         left: -999px;
+
         .overlay {
             left: -999px;
         }

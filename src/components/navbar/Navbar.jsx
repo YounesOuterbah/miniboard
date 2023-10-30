@@ -10,27 +10,30 @@ import { BsPeople, BsCalendarDate, BsPencilSquare, BsPaintBucket } from "react-i
 import { GrTask } from "react-icons/gr";
 import { MdDashboard } from "react-icons/md";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Navbar = ({ menuToggle, setMenuToggle }) => {
   const [toggle, setToggle] = useState("Dashboard");
   return (
     <div className={menuToggle ? "navbar open" : "navbar"}>
       <div className="container">
-      <div className="overlay"></div>
+        <div className="overlay"></div>
         <div className="logo">
           <MdDashboard className="icon" />
           LUMINEX
         </div>
         <ul className="dashboard-contect">
-          <li
+          <Link
+            to="/"
             className={toggle === "Dashboard" ? "active" : ""}
             onClick={() => {
               setToggle("Dashboard"), setMenuToggle(!menuToggle);
             }}
           >
             <AiOutlineHome className="icon" /> Dashboard
-          </li>
-          <li
+          </Link>
+          <Link
+            to="/settings"
             className={toggle === "Account" ? "active" : ""}
             onClick={() => {
               setToggle("Account"), setMenuToggle(!menuToggle);
@@ -38,9 +41,9 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <AiOutlineSetting className="icon" />
             Account Settings
-          </li>
+          </Link>
           <Line txt="PAGES" />
-          <li
+          <Link
             className={toggle === "Order" ? "active" : ""}
             onClick={() => {
               setToggle("Order"), setMenuToggle(!menuToggle);
@@ -48,8 +51,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <AiOutlineShoppingCart className="icon" />
             Order
-          </li>
-          <li
+          </Link>
+          <Link
             className={toggle === "Employees" ? "active" : ""}
             onClick={() => {
               setToggle("Employees"), setMenuToggle(!menuToggle);
@@ -57,8 +60,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsPeople className="icon" />
             Employees
-          </li>
-          <li
+          </Link>
+          <Link
             className={toggle === "Customers" ? "active" : ""}
             onClick={() => {
               setToggle("Customers"), setMenuToggle(!menuToggle);
@@ -66,9 +69,9 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <AiOutlineUsergroupAdd className="icon" />
             Customers
-          </li>
+          </Link>
           <Line txt="APPS" />
-          <li
+          <Link
             className={toggle === "Calender" ? "active" : ""}
             onClick={() => {
               setToggle("Calender"), setMenuToggle(!menuToggle);
@@ -76,12 +79,12 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsCalendarDate className="icon" />
             Calender
-          </li>
-          <li className={toggle === "Kanban" ? "active" : ""} onClick={() => setToggle("Kanban")}>
+          </Link>
+          <Link className={toggle === "Kanban" ? "active" : ""} onClick={() => setToggle("Kanban")}>
             <GrTask className="icon" />
             Kanban
-          </li>
-          <li
+          </Link>
+          <Link
             className={toggle === "Editor" ? "active" : ""}
             onClick={() => {
               setToggle("Editor"), setMenuToggle(!menuToggle);
@@ -89,8 +92,8 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsPencilSquare className="icon" />
             Editor
-          </li>
-          <li
+          </Link>
+          <Link
             className={toggle === "Cpicker" ? "active" : ""}
             onClick={() => {
               setToggle("Cpicker"), setMenuToggle(!menuToggle);
@@ -98,7 +101,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsPaintBucket className="icon" />
             Color Picker
-          </li>
+          </Link>
         </ul>
       </div>
     </div>
