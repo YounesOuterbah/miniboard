@@ -82,6 +82,7 @@
 
     .navbar.open {
         display: flex;
+        z-index: 999;
         left: 0;
         position: absolute;
         transition: 0.3s;
