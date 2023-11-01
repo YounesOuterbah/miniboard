@@ -1,11 +1,6 @@
 import "./navbar.scss";
 import { Line } from "../line/Line";
-import {
-  AiOutlineHome,
-  AiOutlineSetting,
-  AiOutlineShoppingCart,
-  AiOutlineUsergroupAdd,
-} from "react-icons/ai";
+import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import { BsPeople, BsCalendarDate, BsPencilSquare, BsPaintBucket } from "react-icons/bs";
 import { GrTask } from "react-icons/gr";
 import { MdDashboard } from "react-icons/md";
@@ -27,6 +22,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           LUMINEX
         </div>
         <ul className="dashboard-contect">
+        <Line txt="HOME" />
           <Link
             to="/"
             className={isLinkActive("/") ? "active" : ""}
@@ -45,37 +41,6 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <AiOutlineSetting className="icon" />
             Account Settings
-          </Link>
-          <Line txt="PAGES" />
-          <Link
-            to="/order"
-            className={isLinkActive("/order") ? "active" : ""}
-            onClick={() => {
-              setToggle("Order"), setMenuToggle(!menuToggle);
-            }}
-          >
-            <AiOutlineShoppingCart className="icon" />
-            Order
-          </Link>
-          <Link
-            to="/employees"
-            className={isLinkActive("/employees") ? "active" : ""}
-            onClick={() => {
-              setToggle("Employees"), setMenuToggle(!menuToggle);
-            }}
-          >
-            <BsPeople className="icon" />
-            Employees
-          </Link>
-          <Link
-            to="/customers"
-            className={isLinkActive("/customers") ? "active" : ""}
-            onClick={() => {
-              setToggle("Customers"), setMenuToggle(!menuToggle);
-            }}
-          >
-            <AiOutlineUsergroupAdd className="icon" />
-            Customers
           </Link>
           <Line txt="APPS" />
           <Link
