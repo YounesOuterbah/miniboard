@@ -4,6 +4,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import { Settings } from "./pages/settings/Settings";
+import { CalendarPage } from "./pages/calendar/CalendarPage.jsx";
 
 function App() {
   const [menuToggle, setMenuToggle] = useState(false);
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/calendar" element={<CalendarPage />} />
           </Routes>
         </div>
       </div>
