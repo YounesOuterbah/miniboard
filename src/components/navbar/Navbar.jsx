@@ -19,10 +19,10 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
         <div className="overlay"></div>
         <div className="logo">
           <MdDashboard className="icon" />
-          LUMINEX
+          MINIBOARD
         </div>
         <ul className="dashboard-contect">
-        <Line txt="HOME" />
+          <Line txt="HOME" />
           <Link
             to="/"
             className={isLinkActive("/") ? "active" : ""}
