@@ -14,8 +14,7 @@
 
     textarea {
         width: 100%;
-        padding-top: 20px;
-        padding: 10px;
+        padding: 20px 10px 10px 10px;
         resize: none;
         height: 100px;
         font-size: 16px;
@@ -27,8 +26,6 @@
         &:focus-within {
             border-color: var(--mainColor);
         }
-
-
     }
 
     .form {
@@ -67,5 +64,15 @@
             }
         }
 
+    }
+}
+
+@media (max-width:588px) {
+    .info-tab {
+        textarea {min-height: 200px;}
+
+        & .form .datetime {
+            width: 100%;
+        }
     }
 }
