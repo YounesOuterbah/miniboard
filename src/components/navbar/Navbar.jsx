@@ -1,8 +1,7 @@
 import "./navbar.scss";
 import { Line } from "../line/Line";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
-import { BsPeople, BsCalendarDate, BsPencilSquare, BsPaintBucket } from "react-icons/bs";
-import { GrTask } from "react-icons/gr";
+import { BsCalendarDate } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -52,34 +51,6 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsCalendarDate className="icon" />
             Calendar
-          </Link>
-          <Link
-            to="/kanban"
-            className={isLinkActive("/kanban") ? "active" : ""}
-            onClick={() => setToggle("Kanban")}
-          >
-            <GrTask className="icon" />
-            Kanban
-          </Link>
-          <Link
-            to="/editor"
-            className={isLinkActive("/editor") ? "active" : ""}
-            onClick={() => {
-              setToggle("Editor"), setMenuToggle(!menuToggle);
-            }}
-          >
-            <BsPencilSquare className="icon" />
-            Editor
-          </Link>
-          <Link
-            to="/color-picker"
-            className={isLinkActive("/color-picker") ? "active" : ""}
-            onClick={() => {
-              setToggle("ColorPicker"), setMenuToggle(!menuToggle);
-            }}
-          >
-            <BsPaintBucket className="icon" />
-            Color Picker
           </Link>
         </ul>
       </div>
