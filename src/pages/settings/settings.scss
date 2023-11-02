@@ -84,7 +84,7 @@
 
                     button.reset {
                         margin-left: 10px;
-                        background: white;
+                        background: transparent;
                         color: #ff4c51;
                         border: 1px solid #ff4c51;
                         box-shadow: none;
@@ -156,7 +156,7 @@
     }
 }
 
-@media (max-width:588px) {
+@media (max-width:756px) {
     .settings .box-container {
         .links {
             li .icon {
@@ -192,5 +192,74 @@
             }
         }
 
+    }
+}
+
+// dark mode configuration
+
+.settings.dark .box-container {
+    background: var(--darkCardColor);
+
+
+    .content {
+        .info-tab {
+            textarea {
+                background: transparent;
+                color: rgba(231, 227, 252, 0.842);
+                border-color: #595572;
+
+            }
+
+            label {
+                background: var(--darkCardColor);
+                color: rgba(231, 227, 252, 0.68);
+            }
+        }
+
+        .form {
+            .sex p {
+                color: rgba(231, 227, 252, 0.68);
+            }
+
+            input,
+            select {
+                color: rgba(231, 227, 252, 0.842);
+                background: transparent;
+                border-color: #595572;
+            }
+
+            select option {
+                background: var(--darkCardColor);
+            }
+
+            label {
+                color: rgba(231, 227, 252, 0.68);
+                background: #312d4b;
+            }
+        }
+
+        .img-wrapper .info p {
+            color: rgba(231, 227, 252, 0.68);
+        }
+
+    }
+
+
+    .links li {
+        color: rgba(231, 227, 252, 0.68);
+
+        &:hover {
+            color: var(--mainColor);
+        }
+    }
+
+    .links li.active {
+        color: var(--mainColor);
+    }
+}
+
+@media (max-width:1100px) {
+    .settings {
+        height: 100vh;
     }
 }

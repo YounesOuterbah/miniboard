@@ -1,7 +1,7 @@
 import "./navbar.scss";
 import { Line } from "../line/Line";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
-import { BsCalendarDate } from "react-icons/bs";
+// import { BsCalendarDate } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
 import { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -43,7 +43,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
             <AiOutlineSetting className="icon" />
             Account Settings
           </Link>
-          <Line txt="APPS" />
+          {/* <Line txt="APPS" />
           <Link
             to="/calendar"
             className={isLinkActive("/calendar") ? "active" : ""}
@@ -53,7 +53,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           >
             <BsCalendarDate className="icon" />
             Calendar
-          </Link>
+          </Link> */}
         </ul>
       </div>
     </div>

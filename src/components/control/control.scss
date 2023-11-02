@@ -91,6 +91,9 @@
 .control {
     .menu-search .search.dark {
         border-color: rgba(231, 227, 252, 0.87);
+        &:focus-within{
+            border-color: var(--mainColor);
+        }
 
         .icon.dark {
             color: white;

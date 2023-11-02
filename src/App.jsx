@@ -4,7 +4,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import { Settings } from "./pages/settings/Settings";
-import { CalendarPage } from "./pages/calendar/CalendarPage.jsx";
+// import { CalendarPage } from "./pages/calendar/CalendarPage.jsx";
 import { ThemeContext } from "./context/ThemeContext.jsx";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/calendar" element={<CalendarPage />} />
+            {/* <Route path="/calendar" element={<CalendarPage />} /> */}
           </Routes>
         </div>
       </div>
