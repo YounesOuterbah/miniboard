@@ -103,6 +103,27 @@
     }
 }
 
+// dark mode configuration
+
 .navbar .container ul.dashboard-contect.dark a {
     color: white;
+}
+
+.application.dark .navbar.open {
+    background: var(--darkBgColor);
+
+    .logo {
+        color: white;
+    }
+
+    .line {
+        color: rgba(231, 227, 252, 0.38);
+        span{
+            background: var(--darkBgColor);
+        }
+
+        &::before {
+            background: rgba(231, 227, 252, 0.12);
+        }
+    }
 }
