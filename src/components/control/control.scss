@@ -85,3 +85,23 @@
         display: none;
     }
 }
+
+// dark mode configuration
+
+.control {
+    .menu-search .search.dark {
+        border-color: rgba(231, 227, 252, 0.87);
+
+        .icon.dark {
+            color: white;
+        }
+    }
+
+    .menu.dark {
+        color: white;
+    }
+
+    .profile .icon.dark {
+        color: white;
+    }
+}
