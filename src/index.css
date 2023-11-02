@@ -8,6 +8,8 @@
 :root {
   --mainColor: #9155fd;
   --bgColor: rgb(244, 245, 250);
+  --darkBgColor: #28243d;
+  --darkCardColor: #312d4b;
   --txtColor: rgba(58, 53, 65, 0.87);
   --txtColorVar: rgba(58, 53, 65, 0.68);
   --txtLineColor: rgba(58, 53, 65, 0.38);
@@ -21,6 +23,9 @@ body {
 
 .application {
   display: flex;
+}
+.application.dark{
+  background: var(--darkBgColor);
 }
 .app-body {
   width: 80%;

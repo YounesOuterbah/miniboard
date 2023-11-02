@@ -3,12 +3,14 @@ import { Line } from "../line/Line";
 import { AiOutlineHome, AiOutlineSetting } from "react-icons/ai";
 import { BsCalendarDate } from "react-icons/bs";
 import { MdDashboard } from "react-icons/md";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Navbar = ({ menuToggle, setMenuToggle }) => {
   const location = useLocation();
   const [toggle, setToggle] = useState("Dashboard");
+  const { theme } = useContext(ThemeContext);
 
   const isLinkActive = (path) => location.pathname === path;
 
@@ -20,7 +22,7 @@ export const Navbar = ({ menuToggle, setMenuToggle }) => {
           <MdDashboard className="icon" />
           MINIBOARD
         </div>
-        <ul className="dashboard-contect">
+        <ul className={theme === "light" ? "dashboard-contect" : "dashboard-contect dark"}>
           <Line txt="HOME" />
           <Link
             to="/"

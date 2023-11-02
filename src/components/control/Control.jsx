@@ -3,10 +3,12 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BiMenu } from "react-icons/bi";
 import { BsMoonStars, BsBell, BsSun } from "react-icons/bs";
 import profileImage from "/image/profile.png";
-import { useState } from "react";
+import { useContext} from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Control = ({ setMenuToggle }) => {
-  const [toggle, setToggle] = useState();
+  const { theme, setTheme } = useContext(ThemeContext);
+
   return (
     <div className="control">
       <div className="menu-search">
@@ -17,11 +19,9 @@ export const Control = ({ setMenuToggle }) => {
         </div>
       </div>
       <div className="profile">
-        {toggle ? (
-          <BsMoonStars onClick={() => setToggle(!toggle)} className="icon" />
-        ) : (
-          <BsSun onClick={() => setToggle(!toggle)} className="icon" />
-        )}
+        <div className="mode" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+          {theme === "light" ? <BsMoonStars className="icon" /> : <BsSun className="icon" />}
+        </div>
         <BsBell className="icon" />
         <div className="img">
           <img src={profileImage} alt="" />

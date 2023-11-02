@@ -314,7 +314,6 @@
         background: #fff;
         border-radius: 6px;
         padding: 20px;
-        overflow-x: scroll;
 
         table {
             width: 100%;
@@ -375,6 +374,70 @@
 
         .total-earning {
             flex: 1;
+        }
+    }
+}
+
+@media (max-width:756px) {
+    .dashboard .members-table {
+        overflow-x: scroll;
+
+        table th {
+            min-width: 200px;
+        }
+    }
+}
+
+
+// dark mode configuration
+
+
+.dashboard.dark {
+    .members-table {
+        background: var(--darkCardColor);
+
+        table {
+            color: rgba(231, 227, 252, 0.87);
+
+            tbody td p {
+                color: rgba(231, 227, 252, 0.68);
+            }
+        }
+    }
+
+    .cards {
+
+        h1.title {
+            color: #c5cce5 !important;
+        }
+
+        p {
+            color: #a5a8bf !important;
+        }
+
+
+        .card:nth-child(2) .boxs .card-box .info {
+            .amount {
+                color: rgba(231, 227, 252, 0.87);
+            }
+
+            .title {
+                color: rgba(231, 227, 252, 0.692);
+            }
+        }
+
+        .bar-chart,
+        .total-earning,
+        .card,
+        .multi-box-container .multi-box .box,
+        .members-table {
+            background: var(--darkCardColor);
+        }
+
+        .card {
+            .img::before {
+                background-color: #35314f;
+            }
         }
     }
 }
