@@ -109,7 +109,8 @@
     color: white;
 }
 
-.application.dark .navbar.open {
+.application.dark .navbar.open,
+.application.dark .navbar {
     background: var(--darkBgColor);
 
     .logo {
@@ -118,12 +119,16 @@
 
     .line {
         color: rgba(231, 227, 252, 0.38);
-        span{
+
+        span {
             background: var(--darkBgColor);
+            position: relative;
+            z-index: 4;
         }
 
         &::before {
             background: rgba(231, 227, 252, 0.12);
+            z-index: 2;
         }
     }
 }
